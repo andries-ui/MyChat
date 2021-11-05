@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:id="@+id/frame_layout"
-        android:backgroundTint="@color/red_500"
+        android:layout_above="@+id/menu"
         android:layout_alignTop="@+id/menu">
 
     </FrameLayout>

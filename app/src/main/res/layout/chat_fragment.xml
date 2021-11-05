@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/header"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/btnadd"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="Chats"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myfriends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:layout_marginTop="10dp" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadius="12dp"
+        android:id="@+id/inviteNewFriends"
+        android:text="Add a friend"
+        android:textColor="@color/white"
+        android:layout_marginLeft="30dp"
+        app:strokeColor="@color/white"
+        android:layout_marginRight="30dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        app:layout_behavior="com.example.app.ScrollAwareFABBehavior"
+        style="@style/Widget.MaterialComponents.Chip.Action"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

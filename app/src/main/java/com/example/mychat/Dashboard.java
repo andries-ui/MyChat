@@ -29,7 +29,8 @@ public class Dashboard extends AppCompatActivity {
     }
 
     private void bottomMenu() {
-        chipNavigationBar.setOnItemSelectedListener (new ChipNavigationBar.OnItemSelectedListener() {
+        chipNavigationBar.setOnItemSelectedListener
+                (new ChipNavigationBar.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(int i) {
                         Fragment fragment = null;
@@ -37,10 +38,10 @@ public class Dashboard extends AppCompatActivity {
                             case R.id.home:
                                 fragment = new homeFragment();
                                 break;
-                            case R.id.profile:
+                            case R.id.chat:
                                 fragment = new chatFragment();
                                 break;
-                            case R.id.chat:
+                            case R.id.profile:
                                 fragment = new profileFragment();
                                 break;
                         }

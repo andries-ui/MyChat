@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                startActivity(new Intent( getApplicationContext() ,Dashboard.class));
+                startActivity(new Intent( getApplicationContext() ,WelcomeScreen.class));
+                finish();
             }
         }).start();
     }
